@@ -32,8 +32,8 @@ class ClassComponent extends Component{
             <div className = "row">
                 <div className = "col-md-12">
                     <div className = "card">
-                        <div className = "card-header">
-                            <p><strong>Character Information Index</strong></p>
+                        <div className = "card-header text-center">
+                            <h3><strong>Class Information</strong></h3>
                         </div>
                         <div className = "card-body">
                             <p><strong>Classes</strong></p>

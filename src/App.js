@@ -8,14 +8,22 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (  
+  return (
+    <Router>  
     <div className = "container">
       <div className = "row">
+        &nbsp;
+      </div>
+      <div className = "row">
         <div className = "col">
-          <RacesComponent/>
+          <Route path = "/" exact component = {MainPageComponent}/>
+          <Route path = "/CharComponent" component = {CharComponent}/>
+          <Route path = "/ClassComponent" component = {ClassComponent}/>
+          <Route path = "/RacesComponent" component = {RacesComponent}/>
         </div>
       </div>
     </div>
+    </Router>
   );
 }
 

@@ -9,7 +9,8 @@ class RacesComponent extends Component{
         this.state = {
             races: {
                languages: [],
-               subraces: []
+               subraces: [],
+               traits: []
             }
         }
     }
@@ -31,8 +32,8 @@ class RacesComponent extends Component{
             <div className = "row">
                 <div className = "col-md-12">
                     <div className = "card">
-                        <div className = "card-header">
-                            <p><strong>Race Information</strong></p>
+                        <div className = "card-header text-center">
+                            <h3><strong>Race Information</strong></h3>
                         </div>
                         <div className = "card-body">
                             <p><strong>Races</strong></p>
@@ -50,22 +51,29 @@ class RacesComponent extends Component{
                             <hr />
                             <p><strong>Race Name:</strong> { this.state.races.name }</p>
                             <p><strong>Speed:</strong> { this.state.races.speed }</p>
+                            <hr />
                             <p><strong>Alignment:</strong></p>
                             <p> { this.state.races.alignment } </p>
-                            <p><strong>Alignment:</strong></p>
+                            <hr />
+                            <p><strong>Age:</strong></p>
                             <p> { this.state.races.age } </p>
                             <p><strong>Size:</strong></p>
                             <p> { this.state.races.size } </p>
                             <p><strong>Description of Size:</strong></p>
                             <p> { this.state.races.size_description } </p>
+                            <hr />
                             <p><strong>Languages:</strong></p>
                             <ul>
                                 {this.state.races.languages.map((e, i) => <li key = { i }>{ e.name }</li> )}
                             </ul>
                             <p><strong>Language Description</strong></p>
                             <p> { this.state.races.language_desc } </p>
-
-
+                            <hr />
+                            <p><strong>Traits</strong></p>
+                            <ul>
+                                {this.state.races.traits.map((e, i) => <li key = { i }>{ e.name }</li> )}
+                            </ul>
+                            <hr />
                             <p><strong>Subraces:</strong></p>
                             <ul>
                                 {this.state.races.subraces.map((e, i) => <li key = { i }>{ e.name }</li> )}
